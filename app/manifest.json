@@ -10,14 +10,12 @@
       "scripts/background.js"
     ]
   },
-  "permissions": [
-    "notifications",
-    "storage",
-    "management",
-    "webRequest",
-    "*://*.google.com/"
-  ],
-  "chrome_url_overrides" : {
+  "permissions": ["identity", "storage", "tabs"],
+  "chrome_url_overrides": {
     "newtab": "newtab.html"
-  }
+  },
+  "web_accessible_resources": [
+    "newtab.html"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
