@@ -12,11 +12,19 @@
   </head>
   <body>
     <div id="bg"></div>
-    <div class="wrapper">
-      <button id="test">
-        Authenticated
-      </button>
+
+    <dialog class="mdl-dialog" id="needAuthorization">
+    <h4 class="mdl-dialog__title">You need to authorize with Trello</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        Please, log in using Trello account.
+      </p>
     </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button" id="authorize">Authorize</button>
+    </div>
+    </dialog>
+
     <!-- build:js scripts/newtab-vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -24,6 +32,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/newtab.js -->
+    <script src="scripts/material.min.js"></script>
     <script src="scripts/client.js"></script>
     <script src="scripts/newtab.js"></script>
     <!-- endbuild -->
